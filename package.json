@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Project--5--Products-Management\r Key points In this project we will work feature wise. That means we pick one object like user, book, blog, etc at a time. We work through it's feature. The steps would be: We create it's model. We build it's APIs. We test these APIs. We deploy these APIs. We integrate these APIs with frontend. We will repeat steps from Step 1 to Step 5 for each feature in this project. This project is divided into 4 features namely User, Product, Cart and Order. You need to work on a single feature at a time. Once that is completed as per above mentioned steps. You will be instructed to move to next Feature. In this project we are changing how we send token with a request. Instead of using a custom header key like x-api-key, you need to use Authorization header and send the JWT token as Bearer token. Create a group database groupXDatabase. You can clean the db you previously used and resue that. This time each group should have a single git branch. Coordinate amongst yourselves by ensuring every next person pulls the code last pushed by a team mate. You branch will be checked as part of the demo. Branch name should follow the naming convention project/productsManagementGroupX Follow the naming conventions exactly as instructed. FEATURE I - User Models User Model { fname: {string, mandatory}, lname: {string, mandatory}, email: {string, mandatory, valid email, unique}, profileImage: {string, mandatory}, // s3 link phone: {string, mandatory, unique, valid Indian mobile number}, password: {string, mandatory, minLen 8, maxLen 15}, // encrypted password address: { shipping: { street: {string, mandatory}, city: {string, mandatory}, pincode: {number, mandatory} }, billing: { street: {string, mandatory}, city: {string, mandatory}, pincode: {number, mandatory} } }, createdAt: {timestamp}, updatedAt: {timestamp} } User APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "amisha",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.499.0",
+    "aws-sdk": "^2.1541.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "nodemon": "^3.0.3"
+  }
+}
